@@ -11,6 +11,8 @@ const Hero = () => {
         <p className=" text-red-400">BEST DESTINATIONS AROUND THE WORLD</p>
         <h1 className="text-5xl">Travel, enjoy and live a new and full life</h1>
       <p>Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
+      <input type="email" placeholder='Email address' className='email_footer text-white h-10 border-2 border-red-400 my-6 ' />
+<button className=' bg-red-400 w-24 text-green-900 p-2 ml-2'>SignUp</button>
       </div>
       <div>
 <img src={Woman} alt="" className=" w-3/4 " />
