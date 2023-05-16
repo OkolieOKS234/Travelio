@@ -1,3 +1,55 @@
+
+
 .start{
   background: url("./assets/Decore.png");
+}
+
+.slider {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+}
+
+.slide {
+  width: 100%;
+  height: auto;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 996px){
+
+
+}
+
+@media (max-width: 768px) {
+  /* Hero section */
+  .hero_sect{
+flex-wrap: wrap;
+  }
+  .hero_first{
+    min-width: 100%;
+  }
+}
+@media(max-width: 412px){
+  .hero_sect .hero_first{
+    min-width: 412px;
+    margin: 0;
+    padding: 10px;
+  }
+  .navbar_big{
+    background-color: red;
+  }
 }
