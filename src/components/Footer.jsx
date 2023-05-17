@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import Facebook from "../assets/icons/facebook.png";
 import Instagram from "../assets/icons/instagram.png";
 import Twitter from "../assets/icons/twitter.png";
@@ -6,9 +6,28 @@ import PlayStore from "../assets/icons/playstore.png";
 import AppStore from "../assets/icons/appstore.png";
 
 const Footer = () => {
+// Date
+const [currentDate, setCurrentDate] = useState(new Date());
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentDate(new Date());
+  }, 1000);
+
+  return () => {
+    clearInterval(interval);
+  };
+}, []);
+
+const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1)
+  .toString()
+  .padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}`;
+
+
+
   return (
     <footer className="py-12">
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center pb-4">
         <div className="max-w-xs">
           <h2>Travelio</h2>
           <p className="text-sm">
@@ -54,6 +73,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <hr />
+      <p className="text-center pt-4">Rights reserved &#169; {formattedDate}</p>
     </footer>
   );
 };
