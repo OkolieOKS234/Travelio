@@ -53,3 +53,20 @@ flex-wrap: wrap;
     background-color: red;
   }
 }
+/* SUBSCRIBE SECTION */
+.subscribe{
+  background: #b4a4e8;
+opacity: 0.8;
+border-radius: 120px 29px 20px 20px;
+/* transform: matrix(-1, 0, 0, 1, 0, 0); */
+width: 80%;
+}
+.underline-coor::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: red;
+}
